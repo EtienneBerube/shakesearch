@@ -11,9 +11,18 @@
 <body>
     <p>
         <form id="form">
+            <p>Please select API:</p>
+            <input type="radio" id="default" name="version" value="default">
+            <label for="default">Default</label><br>
+            <input type="radio" id="new" name="version" value="new" checked>
+            <label for="new">New and improved</label>
+            <br>
+            <br>
             <label for="query">Query</label>
             <input type="text" id="query" name="query">
             <button type="submit">Search</button>
+            <br>
+            <p id="num_result"></p>
         </form>
     </p>
     <p>

@@ -3,7 +3,7 @@ const Controller = {
     ev.preventDefault();
     const form = document.getElementById("form");
     const data = Object.fromEntries(new FormData(form));
-    const response = fetch(`/search?q=${data.query}`).then((response) => {
+    const response = fetch(`/search/${data.version}?q=${data.query}`).then((response) => {
       response.json().then((results) => {
         Controller.updateTable(results);
       });
@@ -12,11 +12,13 @@ const Controller = {
 
   updateTable: (results) => {
     const table = document.getElementById("table-body");
+    const numResults = document.getElementById("num_result");
     const rows = [];
-    for (let result of results) {
+    for (let result of results.results) {
       rows.push(`<tr>${result}<tr/>`);
     }
     table.innerHTML = rows;
+    numResults.innerText = `Server found ${results.results.length} results in ${results.time}`
   },
 };
 
