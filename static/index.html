@@ -2,34 +2,34 @@
 <html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <title>ShakeSearch</title>
-  <link rel="stylesheet" href="style.css">
-  <meta name="theme-color" content="#fafafa">
+    <meta charset="utf-8">
+    <title>ShakeSearch</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#fafafa">
 </head>
 
 <body>
-    <p>
-        <form id="form">
-            <p>Please select work to query:</p>
-            <select id="sel">
-                 <option value="all" selected>All</option>
-            </select>
-            <br>
-            <br>
-            <label for="query">Query</label>
-            <input type="text" id="query" name="query">
-            <button type="submit">Search</button>
-            <br>
-            <p id="num_result"></p>
-        </form>
-    </p>
-    <p>
-        <table id="table">
-          <tbody id="table-body"></tbody>
-        </table>
-    </p>
-  <script src="app.js"></script>
+<div>
+    <form id="form">
+        <p>Please select work to query:</p>
+        <select id="sel">
+            <option value="all" selected>All</option>
+        </select>
+        <br>
+        <br>
+        <label for="query">Query</label>
+        <input type="text" id="query" name="query">
+        <button type="submit">Search</button>
+        <br>
+        <p id="num_result"></p>
+    </form>
+</div>
+<div>
+    <table id="table">
+        <tbody id="table-body"></tbody>
+    </table>
+</div>
+<script src="app.js"></script>
 </body>
 
 </html>
